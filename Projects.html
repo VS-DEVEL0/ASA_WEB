@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects – Airstream Architects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+    
+    .tile-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    .tile-hover:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    
+    .filter-dropdown {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 0.375rem; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 16rem;
+      z-index: 50;
+    }
+  </style>
+</head>
+
+
+
+
+  <body class="bg-white min-h-screen flex flex-col">
+ 
+
+  <nav class="flex justify-between px-10 py-5 w-full z-[1000] bg-white opacity-75 font-Arial shadow-lg">
+    <div>
+      <a href="index.html">
+        <h1 class="text-2xl font-bold tracking-wider text-black transition-colors duration-300 hover:text-blue-700">
+          AIRSTREAM ARCHITECTS
+        </h1>
+      </a>
+    </div>
+    <div class="flex">
+      <a href="Projects.html">
+        <h2 class="ml-4 text-base tracking-wider text-blue-700 font-semibold">
+          PROJECTS
+        </h2>
+      </a>
+      <a href="contact.html">
+        <h2 class="ml-4 text-base tracking-wider text-black transition-colors duration-300 hover:text-blue-700">
+          CONTACT
+        </h2>
+      </a>
+    </div>
+  </nav>
+
+<main class="flex-grow">
+ 
+  <section class="text-center px-6 py-10 border-b">
+    <h1 class="text-3xl font-bold tracking-widest">PROJECT PORTFOLIO</h1>
+  </section>
+
+
+ 
+  <section class="px-6 py-6 flex justify-end relative">
+  <button onclick="toggleDropdown()" id="filterButton" 
+    class="px-4 py-2 border rounded hover:bg-gray-100 flex justify-between items-center font-semibold">
+    Filter ▾
+  </button>
+  <div id="dropdownMenu" class="hidden filter-dropdown absolute right-6 mt-2 bg-white border rounded shadow-lg w-56 p-2 z-50">
+    
+    
+    <div class="p-3 border-b font-bold text-gray-700 cursor-pointer flex justify-between items-center"
+         onclick="toggleCommercialSubmenuAndFilter()">
+      Commercial 
+    </div>
+    
+    
+    <div id="commercialSubmenu" class="hidden pl-6 py-2 text-sm text-gray-700 space-y-1">
+      <button onclick="filterCategory('exhibitions')" class="hover:underline w-full text-left">Exhibitions</button>
+      <button onclick="filterCategory('hospitality')" class="hover:underline w-full text-left">Hospitality</button>
+      <button onclick="filterCategory('office')" class="hover:underline w-full text-left">Office</button>
+      <button onclick="filterCategory('other')" class="hover:underline w-full text-left">Other</button>
+      <button onclick="filterCategory('retail')" class="hover:underline w-full text-left">Retail</button>
+    </div>
+    
+    <button onclick="filterCategory('industrial')" class="p-3 border-b font-bold text-gray-700 hover:underline block w-full text-left">Industrial</button>
+    <button onclick="filterCategory('residential')" class="p-3 border-b font-bold text-gray-700 hover:underline block w-full text-left">Residential</button>
+    
+    <button onclick="filterCategory('all')" class="p-3 border-b font-bold text-gray-700 hover:underline block w-full text-left">Show All</button>
+  </div>
+</section>
+
+
+
+  <section class="px-6 pb-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+   
+      <a href="project1.html" data-category="hospitality" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Commercial - Hospitality/The Valley Geelong/H_2.jpg" alt="The Valley Geelong" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">The Valley Geelong</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project2.html" data-category="exhibitions" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Commercial - Exhibitions/H_ACMI_Marshmallow Laser Feast_Works of Nature_Mark Ashkanasy.jpg" alt="Commercial Exhibition" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Commercial Exhibition</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project3.html" data-category="hospitality" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Commercial - Hospitality/The Woolshed/H_342A7373-HDR-33.jpg" alt="The Woodshed" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">The Woodshed</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project4.html" data-category="hotel" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Commercial - Hotel/Quest Flemington Central/H_IMG_9131.JPG" alt="Commercial - Hotel" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Commercial - Hotel</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project5.html" data-category="education" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Commercial - Office, education, training/Centre for U/H_12.JPG" alt="Center For U" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Center For U</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project6.html" data-category="education" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Commercial - Office, education, training/Future Energy Skills Clayton/H_IMG_0366.jpg" alt="Future Energy Skills Clayton" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Future Energy Skills Clayton</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project7.html" data-category="other" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Commercial - Other/Washed Camberwell/H_IMG_9965.JPG" alt="Washed Camberwell" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Washed Camberwell</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project8.html" data-category="retail" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Commercial - Retail/Anker/H_9.4.25ANKER_CHADSTONE-10.jpg" alt="Anker Chadstone" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Anker Chadstone</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project9.html" data-category="industrial" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Industrial/DANDENONG_SOUTH.jpg" alt="Dandenong South" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Dandenong South</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project10.html" data-category="industrial" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Industrial/pact_melbourne.jpg" alt="Pact Melbourne" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Pact Melbourne</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project11.html" data-category="residential" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Residential/Cremorne/H_MLS_Green2024.jpg" alt="Cremorne" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Cremorne</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project12.html" data-category="residential" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Residential/Fitzroy/H_image5.jpg" alt="Fitzroy" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Fitzroy</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project13.html" data-category="residential" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Residential/Ivanhoe East/H_IMG_4413.JPG" alt="Ivanhoe East" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Ivanhoe East</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+
+      <a href="project14.html" data-category="residential" 
+         class="tile-hover rounded overflow-hidden shadow-sm border">
+        <img src="Photos/Selected Projects/Residential/Mt Helen/H_20090411_0033.jpg" alt="Mt Helen" class="w-full h-40 object-cover" />
+        <div class="p-3">
+          <h3 class="font-medium">Mt Helen</h3>
+          <p class="text-sm text-gray-500">Location and year</p>
+        </div>
+      </a>
+      
+    </div>
+  </section>
+  </main>
+
+  
+
+
+  <footer>
+    <p>&copy; AIRSTREAM ARCHITECTS</p>
+    <style>
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background: #000;
+        color: #fff;
+        display: flex;
+      }
+    </style>
+  </footer>
+
+  
+<script>
+  // Toggle main filter dropdown
+  function toggleDropdown() {
+    document.getElementById('dropdownMenu').classList.toggle('hidden');
+  }
+
+  // Toggle Commercial submenu visibility and filter by commercial categories
+  function toggleCommercialSubmenuAndFilter() {
+    const submenu = document.getElementById('commercialSubmenu');
+    submenu.classList.toggle('hidden');
+    // Filter projects by commercial categories combined
+    filterCategory('commercial');
+  }
+
+  // Filter function that shows/hides tiles based on category
+  function filterCategory(category) {
+    const tiles = document.querySelectorAll('[data-category]');
+    if (category === 'all') {
+      tiles.forEach(tile => tile.style.display = '');
+    } else if (category === 'commercial') {
+      // Show all commercial subcategories
+      const commercialCats = ['exhibitions', 'hospitality', 'office', 'other', 'retail'];
+      tiles.forEach(tile => {
+        tile.style.display = commercialCats.includes(tile.dataset.category) ? '' : 'none';
+      });
+    } else {
+      tiles.forEach(tile => {
+        tile.style.display = tile.dataset.category === category ? '' : 'none';
+      });
+    }
+    // Close dropdown after filtering
+    document.getElementById('dropdownMenu').classList.add('hidden');
+  }
+
+  // Close dropdown if clicked outside
+  document.addEventListener('click', (e) => {
+    const filterButton = document.getElementById('filterButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    if (!filterButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.add('hidden');
+      document.getElementById('commercialSubmenu').classList.add('hidden'); // hide submenu too
+    }
+  });
+</script>
+
+  </body>
+  
+</html>

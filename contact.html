@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Airstream Architects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+    .form-tile {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      z-index: 10;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    .form-tile:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contact-bg {
+      position: relative;
+      background-image: url('Photos/Selected Projects/Commercial - Hospitality/The Woolshed/2_342A7344-HDR-36.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 6rem 1.5rem;
+    }
+   
+    .contact-bg::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.4);
+      z-index: 5;
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+ 
+  <nav class="flex justify-between px-10 py-5 w-full z-[1000] bg-white opacity-75 font-Arial shadow-lg">
+    <div>
+      <a href="index.html">
+        <h1 class="text-2xl font-bold tracking-wider text-black transition-colors duration-300 hover:text-blue-700">
+          AIRSTREAM ARCHITECTS
+        </h1>
+      </a>
+    </div>
+    <div class="flex">
+      <a href="Projects.html">
+        <h2 class="ml-4 text-base tracking-wider text-black transition-colors duration-300 hover:text-blue-700">
+          PROJECTS
+        </h2>
+      </a>
+      <a href="contact.html">
+        <h2 class="ml-4 text-base tracking-wider text-blue-700 font-semibold">
+          CONTACT
+        </h2>
+      </a>
+    </div>
+  </nav>
+
+
+  <section class="text-center px-6 py-10 border-b">
+    <h1 class="text-3xl font-bold tracking-widest">CONTACT</h1>
+  </section>
+
+  
+  <section class="contact-bg flex justify-center">
+    <form class="w-full max-w-2xl p-6 rounded shadow-md form-tile space-y-4 border relative z-10">
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Name</label>
+        <input type="text" placeholder="Your name" class="mt-1 block w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-black" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Phone</label>
+        <input type="tel" placeholder="Your phone" class="mt-1 block w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus: ring-black" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Email</label>
+        <input type="email" placeholder="Your email" class="mt-1 block w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-black" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Company</label>
+        <input type="text" placeholder="Your company" class="mt-1 block w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-black" />
+      </div>
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Message</label>
+        <textarea placeholder="Your message" rows="4" class="mt-1 block w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-black"></textarea>
+      </div>
+      <div class="text-right">
+        <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-blue-800 transition">
+          Send Message
+        </button>
+      </div>
+    </form>
+  </section>
+
+  
+  <footer>
+    <p>&copy; AIRSTREAM ARCHITECTS</p>
+    <style>
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background: #000;
+        color: #fff;
+        padding-top: 25px;
+        padding-bottom: 25px;
+      }
+    </style>
+  </footer>
+</body>
+</html>
